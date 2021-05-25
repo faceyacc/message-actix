@@ -1,0 +1,13 @@
+/Users/ty/rustyProjects/message-actix/message-actix/target/debug/deps/unicode_bidi-38351b9a0ce556e5.rmeta: /Users/ty/.cargo/registry/src/github.com-1ecc6299db9ec823/unicode-bidi-0.3.5/src/lib.rs /Users/ty/.cargo/registry/src/github.com-1ecc6299db9ec823/unicode-bidi-0.3.5/src/deprecated.rs /Users/ty/.cargo/registry/src/github.com-1ecc6299db9ec823/unicode-bidi-0.3.5/src/format_chars.rs /Users/ty/.cargo/registry/src/github.com-1ecc6299db9ec823/unicode-bidi-0.3.5/src/level.rs /Users/ty/.cargo/registry/src/github.com-1ecc6299db9ec823/unicode-bidi-0.3.5/src/char_data/mod.rs /Users/ty/.cargo/registry/src/github.com-1ecc6299db9ec823/unicode-bidi-0.3.5/src/char_data/tables.rs /Users/ty/.cargo/registry/src/github.com-1ecc6299db9ec823/unicode-bidi-0.3.5/src/explicit.rs /Users/ty/.cargo/registry/src/github.com-1ecc6299db9ec823/unicode-bidi-0.3.5/src/implicit.rs /Users/ty/.cargo/registry/src/github.com-1ecc6299db9ec823/unicode-bidi-0.3.5/src/prepare.rs
+
+/Users/ty/rustyProjects/message-actix/message-actix/target/debug/deps/unicode_bidi-38351b9a0ce556e5.d: /Users/ty/.cargo/registry/src/github.com-1ecc6299db9ec823/unicode-bidi-0.3.5/src/lib.rs /Users/ty/.cargo/registry/src/github.com-1ecc6299db9ec823/unicode-bidi-0.3.5/src/deprecated.rs /Users/ty/.cargo/registry/src/github.com-1ecc6299db9ec823/unicode-bidi-0.3.5/src/format_chars.rs /Users/ty/.cargo/registry/src/github.com-1ecc6299db9ec823/unicode-bidi-0.3.5/src/level.rs /Users/ty/.cargo/registry/src/github.com-1ecc6299db9ec823/unicode-bidi-0.3.5/src/char_data/mod.rs /Users/ty/.cargo/registry/src/github.com-1ecc6299db9ec823/unicode-bidi-0.3.5/src/char_data/tables.rs /Users/ty/.cargo/registry/src/github.com-1ecc6299db9ec823/unicode-bidi-0.3.5/src/explicit.rs /Users/ty/.cargo/registry/src/github.com-1ecc6299db9ec823/unicode-bidi-0.3.5/src/implicit.rs /Users/ty/.cargo/registry/src/github.com-1ecc6299db9ec823/unicode-bidi-0.3.5/src/prepare.rs
+
+/Users/ty/.cargo/registry/src/github.com-1ecc6299db9ec823/unicode-bidi-0.3.5/src/lib.rs:
+/Users/ty/.cargo/registry/src/github.com-1ecc6299db9ec823/unicode-bidi-0.3.5/src/deprecated.rs:
+/Users/ty/.cargo/registry/src/github.com-1ecc6299db9ec823/unicode-bidi-0.3.5/src/format_chars.rs:
+/Users/ty/.cargo/registry/src/github.com-1ecc6299db9ec823/unicode-bidi-0.3.5/src/level.rs:
+/Users/ty/.cargo/registry/src/github.com-1ecc6299db9ec823/unicode-bidi-0.3.5/src/char_data/mod.rs:
+/Users/ty/.cargo/registry/src/github.com-1ecc6299db9ec823/unicode-bidi-0.3.5/src/char_data/tables.rs:
+/Users/ty/.cargo/registry/src/github.com-1ecc6299db9ec823/unicode-bidi-0.3.5/src/explicit.rs:
+/Users/ty/.cargo/registry/src/github.com-1ecc6299db9ec823/unicode-bidi-0.3.5/src/implicit.rs:
+/Users/ty/.cargo/registry/src/github.com-1ecc6299db9ec823/unicode-bidi-0.3.5/src/prepare.rs:
