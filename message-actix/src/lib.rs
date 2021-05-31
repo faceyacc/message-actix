@@ -3,27 +3,42 @@ extern crate actix_web;
 
 use actix_web::{middleware, web, App, HttpRequest, HttpServer, Result};
 use serde::Serialize;
+use std::cell::Cell;
+use std::sync::atomic::{AtomicUsize, Ordering};
+use std::sync::{Arc, Mutex};
+use std::usize;
 
+static SERVER_COUNTER: AtomicUsize = AtomicUsize::new(0);
+
+// Holds the state of app.
+struct AppState {
+	server_id: usize, 
+	request_count: Cell<usize>,
+	messages: Arc<Mutex<Vec<String>>>,
+}
 pub struct MessageApp {
 	port: u16,
 }
+
 // Makes IndexResponse struct derive the Serialize trait.
 // The derive attribute allows you to implemnt traits for types
 #[derive(Serialize)]
 struct IndexResponse {
-	message: String,
+	server_id: usize, 
+	request_count: usize, 
+	messages: Vec<String>,
 }
 
 #[get("/")]
-fn index(req: HttpRequest) -> Result<web::Json<IndexResponse>> {
-	let hello = req
-		.headers()
-		.get("hello")
-		.and_then(|v| v.to_str().ok())
-		.unwrap_or_else(|| "world");
+fn index(state: web::Data<AppState>) -> Result<web::Json<IndexResponse>> {
+	let request_count = state.request_count.get() + 1;
+	state.request_count.set(request_count);
+	let ms = state.messages.lock().unwrap();
 	
 	Ok(web::Json(IndexResponse {
-		message: hello.to_owned(), 
+		server_id: state.server_id,
+		request_count, 
+		messages: ms.clone(),
 	} ))
 }
 
