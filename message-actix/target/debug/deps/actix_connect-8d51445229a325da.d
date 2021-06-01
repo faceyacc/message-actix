@@ -1,0 +1,12 @@
+/Users/ty/rustyProjects/message-actix/message-actix/target/debug/deps/actix_connect-8d51445229a325da.rmeta: /Users/ty/.cargo/registry/src/github.com-1ecc6299db9ec823/actix-connect-0.2.5/src/lib.rs /Users/ty/.cargo/registry/src/github.com-1ecc6299db9ec823/actix-connect-0.2.5/src/connect.rs /Users/ty/.cargo/registry/src/github.com-1ecc6299db9ec823/actix-connect-0.2.5/src/connector.rs /Users/ty/.cargo/registry/src/github.com-1ecc6299db9ec823/actix-connect-0.2.5/src/error.rs /Users/ty/.cargo/registry/src/github.com-1ecc6299db9ec823/actix-connect-0.2.5/src/resolver.rs /Users/ty/.cargo/registry/src/github.com-1ecc6299db9ec823/actix-connect-0.2.5/src/service.rs /Users/ty/.cargo/registry/src/github.com-1ecc6299db9ec823/actix-connect-0.2.5/src/ssl/mod.rs /Users/ty/.cargo/registry/src/github.com-1ecc6299db9ec823/actix-connect-0.2.5/src/uri.rs
+
+/Users/ty/rustyProjects/message-actix/message-actix/target/debug/deps/actix_connect-8d51445229a325da.d: /Users/ty/.cargo/registry/src/github.com-1ecc6299db9ec823/actix-connect-0.2.5/src/lib.rs /Users/ty/.cargo/registry/src/github.com-1ecc6299db9ec823/actix-connect-0.2.5/src/connect.rs /Users/ty/.cargo/registry/src/github.com-1ecc6299db9ec823/actix-connect-0.2.5/src/connector.rs /Users/ty/.cargo/registry/src/github.com-1ecc6299db9ec823/actix-connect-0.2.5/src/error.rs /Users/ty/.cargo/registry/src/github.com-1ecc6299db9ec823/actix-connect-0.2.5/src/resolver.rs /Users/ty/.cargo/registry/src/github.com-1ecc6299db9ec823/actix-connect-0.2.5/src/service.rs /Users/ty/.cargo/registry/src/github.com-1ecc6299db9ec823/actix-connect-0.2.5/src/ssl/mod.rs /Users/ty/.cargo/registry/src/github.com-1ecc6299db9ec823/actix-connect-0.2.5/src/uri.rs
+
+/Users/ty/.cargo/registry/src/github.com-1ecc6299db9ec823/actix-connect-0.2.5/src/lib.rs:
+/Users/ty/.cargo/registry/src/github.com-1ecc6299db9ec823/actix-connect-0.2.5/src/connect.rs:
+/Users/ty/.cargo/registry/src/github.com-1ecc6299db9ec823/actix-connect-0.2.5/src/connector.rs:
+/Users/ty/.cargo/registry/src/github.com-1ecc6299db9ec823/actix-connect-0.2.5/src/error.rs:
+/Users/ty/.cargo/registry/src/github.com-1ecc6299db9ec823/actix-connect-0.2.5/src/resolver.rs:
+/Users/ty/.cargo/registry/src/github.com-1ecc6299db9ec823/actix-connect-0.2.5/src/service.rs:
+/Users/ty/.cargo/registry/src/github.com-1ecc6299db9ec823/actix-connect-0.2.5/src/ssl/mod.rs:
+/Users/ty/.cargo/registry/src/github.com-1ecc6299db9ec823/actix-connect-0.2.5/src/uri.rs:
