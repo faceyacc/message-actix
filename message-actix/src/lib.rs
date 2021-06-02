@@ -63,6 +63,25 @@ fn post(msg: web::Json<PostInput>, state: web::Data<AppState>) -> Result<web::Js
 
 }
 
+#[post("/clear")]
+fn clear(state: web::Data<AppState>) -> Result<web::Json<IndexResponse>> {
+	let request_count = state.request_count.get()+1;
+	state.request_count.set(request_count);
+	
+	let mut ms = state.messages.lock().unwrap();
+	ms.clear();
+
+	
+	Ok(web::Json(IndexResponse {
+		server_id: state.server_id, 
+		request_count,
+		messages: vec![],
+	})) 
+}
+
+
+
+
 
 
 // Notice that handler takes state as a parameter.
@@ -98,6 +117,13 @@ impl MessageApp {
 				})
 				.wrap(middleware::Logger::default())
 				.service(index)
+				.service(
+					web::resource("/send")
+						.data(web::JsonConfig::default().limit(4096))
+						.route(web::post().to(post)),
+				)
+				.service(clear)
+				
 		})
 		.bind(("127.0.0.1", self.port))?
 		.workers(8)
