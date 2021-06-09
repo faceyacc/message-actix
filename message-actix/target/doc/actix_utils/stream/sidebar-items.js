@@ -1,1 +1,0 @@
-initSidebarItems({"struct":[["StreamDispatcher",""],["StreamService",""]],"trait":[["IntoStream",""]]});
