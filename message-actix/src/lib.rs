@@ -1,9 +1,11 @@
 #[macro_use]
 extern crate actix_web;
 
-use actix_web::{middleware, web, App, HttpRequest, HttpServer, Result};
+use actix_web::{
+	error::{Error, InternalError, JsonPayloadError},
+	middleware, web, App, HttpRequest, HttpResponse ,HttpServer, Result};
 // use serde::Serialize;
-use std::cell::Cell;
+use std::{cell::Cell, os::macos::raw::stat};
 // use std::os::macos::raw::stat;
 use std::sync::atomic::{AtomicUsize, Ordering};
 use std::sync::{Arc, Mutex};
@@ -11,6 +13,15 @@ use std::usize;
 use serde::{Deserialize, Serialize};
 
 static SERVER_COUNTER: AtomicUsize = AtomicUsize::new(0);
+// const LOG_FORMAT: &'static str = r#""%r" %s %b "%{User-Agent}i" %D"#;
+const LOG_FORMAT:&'static str=r#""%r"%s%b"%{User-Agent}i"%D"#;
+
+#[derive(Serialize)]
+struct PostError {
+	server_id: usize, 
+	request_count:usize, 
+	error: String,
+}
 
 #[derive(Deserialize)]
 struct PostInput {
@@ -41,6 +52,20 @@ struct IndexResponse {
 	server_id: usize, 
 	request_count: usize, 
 	messages: Vec<String>,
+}
+
+fn post_error(err:JsonPayloadError, req: &HttpRequest) -> Error {
+	let extns = req.extensions();
+	let state = extns.get::<web::Data<AppState>>().unwrap();
+	let request_count = state.request_count.get()+1;
+	state.request_count.set(request_count);
+	let post_error = PostError {
+		server_id: state.server_id, 
+		request_count, 
+		error: format!("{}", err), 
+	};
+	InternalError::from_response(err, HttpResponse::BadRequest().json(post_error)).into()
+	
 }
 
  
@@ -108,11 +133,14 @@ impl MessageApp {
 					request_count: Cell::new(0),
 					messages:messages.clone(), 
 				})
-				.wrap(middleware::Logger::default())
+				.wrap(middleware::Logger::new(LOG_FORMAT))
 				.service(index)
 				.service(
 					web::resource("/send")
-						.data(web::JsonConfig::default().limit(4096))
+						.data(
+							web::JsonConfig::default()
+							.limit(4096)
+							.error_handler(post_error),)
 						.route(web::post().to(post)),
 				)
 				.service(clear)
